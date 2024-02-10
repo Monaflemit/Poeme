@@ -1,5 +1,5 @@
 import streamlit as st #streamlit run Poeme.py
-
+import matplotlib.pyplot as plt
 
 with open('1.txt', 'r', encoding='utf-8') as f:
     data1 = f.read()
@@ -66,7 +66,7 @@ st.write('Par exemple, pour retenir le nombre pi,  il existe un poème:')
 
 #st.write('3  $~~$ 1 $~~$ 4 $~~$ 1 $~~$ 5')
 #st.write('Que j\'aime à faire')
-from matplotlib.pyplot import imread
+#from matplotlib.pyplot import imread
 pi_im=imread("pi.png")
 # Affichez l'image dans votre application
 st.image(pi_im, caption="Poème de pi")
