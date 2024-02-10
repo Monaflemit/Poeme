@@ -58,12 +58,25 @@ def wq(e,contenu=data1):
 # Ajouter un titre
 st.title("Poème")
 
-# Ajouter du texte
-st.write('Exemple : ')
-st.write('3  $~~$ 1 $~~$ 4 $~~$ 1 $~~$ 5')
-st.write('Que j\'aime à faire')
+st.write('Site qui aide à la mémorisation de nombres. ')
+
+st.write('Comment faire pour retenir plus facilement les nombres?')
+
+st.write('Par exemple, pour retenir le nombre pi,  il existe un poème:')
+
+#st.write('3  $~~$ 1 $~~$ 4 $~~$ 1 $~~$ 5')
+#st.write('Que j\'aime à faire')
+from matplotlib.pyplot import imread
+pi_im=imread("pi.png")
+# Affichez l'image dans votre application
+st.image(pi_im, caption="Poème de pi")
+
 
 #texte.isdigit()
+
+st.write("J'ai donc créé ce site qui prend en entrer un nombre. Il cherche dans un texte les mots avec le bon nombre de lettres. Il renvoie un poème comme ci-dessus.")
+
+
 
 # Créer une zone de texte
 texte = st.text_input("Entrez un nombre", value="", key=None, type='default')
